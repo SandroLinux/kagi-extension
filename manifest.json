@@ -47,6 +47,14 @@
        "js": ["redirect.js"]
     }
     ],
+    "commands": {
+        "_execute_browser_action": {
+          "suggested_key": {
+            "default": "Ctrl+Shift+K",
+            "mac": "Command+MacCtrl+K"
+          }
+        }
+      },
     "chrome_settings_overrides": {
           "search_provider": {
             "favicon_url": "https://kagi.com/favicon.ico",
