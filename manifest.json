@@ -1,0 +1,64 @@
+{
+    "name": "Kagi",
+    "description": "An extension which makes your default search Kagi and redirects you to kagi.com if you go to Google, Bing, Yahoo, Yandex, Baidu or Sogou",
+    "version": "1.0",
+    "manifest_version": 2,
+    "icons": {"48": "Kagi_48.png"},
+    "content_scripts": [
+    {
+       "matches": [
+           "https://www.google.com/*",
+           "https://www.google.ca/*",
+           "https://www.google.com.hk/*",
+           "https://www.google.com.au/*",
+           "https://www.google.co.in/*",
+           "https://www.google.co.jp/*",
+           "https://www.google.com.ar/*",
+           "https://www.google.com.vn/*",
+           "https://www.google.com.mx/*",
+           "https://www.google.de/*",
+           "https://www.google.fr/*",
+           "https://www.google.hu/*",
+           "https://www.google.it/*",
+           "https://www.google.nl/*",
+           "https://www.google.pl/*",
+           "https://www.google.pt/*",
+           "https://www.bing.com/*",
+           "https://*.yahoo.com/*",
+           "https://www.yahoo.co.jp/*",
+           "https://yandex.ru/*",
+           "https://yandex.com/*",
+           "https://www.aol.com/*",
+           "https://www.aol.co.uk/*",
+           "https://*.ask.com/*",
+           "https://www.egerin.com/*",
+           "https://startpage.com/*",
+           "https://www.webcrawler.com/*",
+           "https://yippy.com/*",
+           "https://www.onesearch.com/*",
+           "https://www.mojeek.com/*",
+           "https://www.startpage.com/*",
+           "https://www.swisscows.com/*",
+           "https://www.givewater.com/*",
+           "https://www.ecosia.org/*",
+           "https://www.baidu.com/*",
+           "https://www.sogou.com/*"
+       ],
+       "js": ["redirect.js"]
+    }
+    ],
+    "chrome_settings_overrides": {
+          "search_provider": {
+            "favicon_url": "https://kagi.com/favicon.ico",
+            "is_default": true,
+            "encoding": "UTF-8",
+            "keyword": "k",
+            "name": "Kagi",
+            "search_url": "https://kagi.com/search?q={searchTerms}"
+          }
+          },
+          "browser_action": {
+            "default_icon": "Kagi.png", 
+            "default_popup": "extension.html"
+        }
+   }

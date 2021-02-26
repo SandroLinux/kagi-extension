@@ -1,0 +1,13 @@
+.body {
+  align-items: center;
+}
+.kagi {
+  background: #063ef7;
+  border: 0;
+  color: #f5f6fa;
+  padding: 12px 48px;
+  font-size: 18px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
