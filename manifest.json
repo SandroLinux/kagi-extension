@@ -1,7 +1,7 @@
 {
     "name": "Kagi",
     "description": "An extension which makes your default search Kagi and redirects you to kagi.com if you go to Google, Bing, Yahoo, Yandex, Baidu or Sogou",
-    "version": "1.0",
+    "version": "1.1",
     "manifest_version": 2,
     "icons": {"48": "Kagi_48.png"},
     "content_scripts": [
@@ -23,6 +23,7 @@
            "https://www.google.nl/*",
            "https://www.google.pl/*",
            "https://www.google.pt/*",
+           "https://www.duckduckgo.com/*",
            "https://www.bing.com/*",
            "https://*.yahoo.com/*",
            "https://www.yahoo.co.jp/*",
@@ -47,6 +48,9 @@
        "js": ["redirect.js"]
     }
     ],
+    "chrome_url_overrides": {
+      "newtab": "newtab.html"
+  },
     "commands": {
         "_execute_browser_action": {
           "suggested_key": {
