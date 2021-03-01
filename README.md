@@ -3,4 +3,6 @@ An extension to add kagi to firefox and add a new beautiful new tab page bulit w
 Kagi: https://kagi.com/
 Thank you to the team at Kagi for making this extension possible.
 ## How to install
-You can get it (once you downloaded the code) running by going to about:debugging in firefox and clicking the "this firefox" link and clicking "Load Temporany Add-on" and finding the main manifest.json file from my code. The Add-on should hit the Firefox Add-on store soon.
+The Kagi extension is now available on the firefox store: https://addons.mozilla.org/firefox/addon/kagi/
+## How to run it from source 
+You can get it (once you downloaded the code) running by going to about:debugging in firefox and clicking the "this firefox" link and clicking "Load Temporany Add-on" and finding the main manifest.json file from my code
