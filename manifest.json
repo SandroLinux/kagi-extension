@@ -1,53 +1,18 @@
 {
     "name": "Kagi",
     "description": "An extension which makes your default search Kagi and redirects you to kagi.com if you go to Google, Bing, Yahoo, Yandex, Baidu or Sogou",
-    "version": "1.1",
+    "author": "Oscar Sanderson",
+    "homepage_url": "https://kagi.com/",
+    "version": "2.0.1",
     "manifest_version": 2,
     "icons": {"48": "Kagi_48.png"},
-    "content_scripts": [
-    {
-       "matches": [
-           "https://www.google.com/*",
-           "https://www.google.ca/*",
-           "https://www.google.com.hk/*",
-           "https://www.google.com.au/*",
-           "https://www.google.co.in/*",
-           "https://www.google.co.jp/*",
-           "https://www.google.com.ar/*",
-           "https://www.google.com.vn/*",
-           "https://www.google.com.mx/*",
-           "https://www.google.de/*",
-           "https://www.google.fr/*",
-           "https://www.google.hu/*",
-           "https://www.google.it/*",
-           "https://www.google.nl/*",
-           "https://www.google.pl/*",
-           "https://www.google.pt/*",
-           "https://www.duckduckgo.com/*",
-           "https://www.bing.com/*",
-           "https://*.yahoo.com/*",
-           "https://www.yahoo.co.jp/*",
-           "https://yandex.ru/*",
-           "https://yandex.com/*",
-           "https://www.aol.com/*",
-           "https://www.aol.co.uk/*",
-           "https://*.ask.com/*",
-           "https://www.egerin.com/*",
-           "https://startpage.com/*",
-           "https://www.webcrawler.com/*",
-           "https://yippy.com/*",
-           "https://www.onesearch.com/*",
-           "https://www.mojeek.com/*",
-           "https://www.startpage.com/*",
-           "https://www.swisscows.com/*",
-           "https://www.givewater.com/*",
-           "https://www.ecosia.org/*",
-           "https://www.baidu.com/*",
-           "https://www.sogou.com/*"
-       ],
-       "js": ["redirect.js"]
-    }
+    "permissions": [
+      "<all_urls>"
     ],
+    "background": {
+      "scripts": ["background.js"]
+    },
+    "incognito": "not_allowed",
     "chrome_url_overrides": {
       "newtab": "newtab.html"
   },
@@ -56,6 +21,13 @@
           "suggested_key": {
             "default": "Ctrl+Shift+K",
             "mac": "Command+MacCtrl+K"
+          },
+          "toggle-feature": {
+            "suggested_key": {
+              "default": "Ctrl+Shift+K+S",
+              "mac": "Command+MacCtrl+S"
+            },
+            "description": "Send a 'toggle-feature' event to the extension"
           }
         }
       },
@@ -66,7 +38,8 @@
             "encoding": "UTF-8",
             "keyword": "k",
             "name": "Kagi",
-            "search_url": "https://kagi.com/search?q={searchTerms}"
+            "search_url": "https://kagi.com/search?q={searchTerms}",
+            "suggest_url": "https://kagi.com/api/autosuggest?q={searchTerms}"
           }
           },
           "browser_action": {

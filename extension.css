@@ -1,5 +1,13 @@
 .body {
   align-items: center;
+  font-family: 'Ubuntu', serif, Calibri;
+}
+@font-face{
+  font-family: "Ubuntu";
+  src: url('fonts/Ubuntu-Medium.ttf')
+}
+.box{
+  font-family: 'Ubuntu', serif, Calibri;
 }
 .kagi {
   background: #063ef7;
@@ -10,6 +18,11 @@
   margin-bottom: 16px;
   border-radius: 8px;
   cursor: pointer;
+  font-family: 'Ubuntu', Times, serif;
+}
+.dark-mode {
+  background-color: black;
+  color: white;
 }
 .searchBox {
   position: absolute;

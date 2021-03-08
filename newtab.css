@@ -2,7 +2,7 @@ body {
     text-align: center;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
-    font-family: 'Ubuntu', Times, serif;
+    font-family: 'Ubuntu', serif, Calibri;
     background-image: url(background.png);
   }
   @font-face{
